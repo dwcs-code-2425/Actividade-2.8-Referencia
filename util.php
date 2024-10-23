@@ -6,7 +6,15 @@ const MIN_PERCENTAGE_VALUE = 0;
 const MAX_PERCENTAGE_VALUE = 100;
 
 const INCREMENTO_CUALIFI= 0.1;
-
+/**
+ * Comprueba para cada elemento del array si está entre el valor min y max,
+ *  ambos incluídos
+ * @param array $values_array array de elementos a comprobar
+ * @param float $min valor mínimo permitido
+ * @param float $max valor máximo permitido
+ * @return bool Devuelve true si todos los elementos del array están dentro
+ *  del rango determinado por min y max, false en caso contrario.
+ */
 function is_valid_range(array $values_array, float $min, float $max): bool
 {
     foreach ($values_array as $value) {
@@ -21,8 +29,12 @@ function eliminar_cadenas_vacias(array $array): array
 {
     return array_filter($array, "es_equiv_cadena_vacia");
 }
-
-function es_equiv_cadena_vacia($var)
+/**
+ * Summary of es_equiv_cadena_vacia
+ * @param string $var
+ * @return bool
+ */
+function es_equiv_cadena_vacia(string $var):bool
 {
     return trim($var) != "";
 }
