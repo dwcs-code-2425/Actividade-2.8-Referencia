@@ -25,7 +25,7 @@ const INCREMENTO_CUALIFI= 0.1;
 /**
  * Comprueba para cada elemento del array si está entre el valor min y max,
  *  ambos incluídos.
- * @param array $values_array array de elementos a comprobar.
+ * @param array $values_array Array de elementos a comprobar.
  * @param float $min Valor mínimo permitido.
  * @param float $max Valor máximo permitido.
  * @return bool Devuelve true si todos los elementos del array están dentro
@@ -112,10 +112,10 @@ function calcular_media_ponderada(array $cals_array, array $pesos_array): float
 /**
  * Modifica todos los elementos del array de entrada, multiplicando su valor por INCREMENTO_CUALIFI.
  * Aunque la función no devuelve nada, el array de entrada es pasado por referencia, por lo que se verá modificado tras la llamada a esta función.
- * @param mixed $array Array de elementos a modificar
+ * @param array $array Array de elementos a modificar
  * @return void
  */
-function corregir_notas(&$array): void
+function corregir_notas(array &$array): void
 {
     
     // for ($i = 0; $i < count($array); $i++) {
